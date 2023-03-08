@@ -1,0 +1,25 @@
+{
+  "name": "b4-pkg",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "tsc",
+    "prebuild": "npm run lint",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublish": "npm run build",
+    "publish": "npm publish --access=public"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.21.1",
+    "@types/prettier": "^2.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.4",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  }
+}
